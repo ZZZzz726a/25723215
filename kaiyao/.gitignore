@@ -2,3 +2,6 @@ node_modules
 dist
 *.local
 .DS_Store
+
+# Figma 转码临时目录，勿进版本库
+f2c-*/

@@ -33,10 +33,11 @@ function photoFilterClass(mood: MoodId, fire: FireLevel): string {
 export function ResultVasePreview({
   mood: moodProp,
   fire: fireProp,
-  glaze: _glazeProp,
+  glaze,
   imageSrc: imageSrcProp,
   frame = "default",
 }: ResultVasePreviewProps) {
+  void glaze;
   const mood = (moodProp ?? "wang") as MoodId;
   const fire = (fireProp ?? "mid") as FireLevel;
 
