@@ -6,6 +6,11 @@
   color-scheme: dark;
 }
 
+html {
+  /* 设计稿宽度 1920px → 基准 16px；视口越窄字号越小，所有 rem 值等比缩放 */
+  font-size: clamp(10px, calc(100vw * 16 / 1920), 16px);
+}
+
 html,
 body,
 #root {

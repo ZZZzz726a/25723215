@@ -37,14 +37,14 @@ export function HomeShowcase() {
                     dbg && HD.hideVitrineInnerPng
                       ? {
                           aspectRatio: "362 / 462",
-                          width: `${innerMax}px`,
-                          maxWidth: `min(95vw, ${innerMax}px)`,
+                          width: innerMax,
+                          maxWidth: `min(95vw, ${innerMax})`,
                         }
                       : {
                           backgroundImage: `url('${vitrineInner}')`,
                           aspectRatio: "362 / 462",
-                          width: `${innerMax}px`,
-                          maxWidth: `min(95vw, ${innerMax}px)`,
+                          width: innerMax,
+                          maxWidth: `min(95vw, ${innerMax})`,
                         }
                   }
                 >
