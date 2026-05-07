@@ -114,7 +114,7 @@ export function StepGlaze() {
                   whileTap={{ scale: 0.995 }}
                   onClick={() => setGlaze(g.id)}
                   aria-pressed={isSel}
-                  className={`group relative flex min-h-0 flex-col overflow-hidden rounded-sm border-2 bg-[#1a1c1c] text-left transition-colors ${
+                  className={`group relative flex min-h-0 w-full min-w-0 flex-col overflow-hidden rounded-sm border-2 bg-[#1a1c1c] text-left transition-colors ${
                     isSel ? selShadow : "border-white/[0.06] hover:border-white/[0.12]"
                   }`}
                 >
@@ -122,15 +122,12 @@ export function StepGlaze() {
                     className={`pointer-events-none absolute inset-0 z-0 transition-colors duration-300 ease-out ${matteClass}`}
                     aria-hidden
                   />
-                  <div className="relative z-[1] flex min-h-0 flex-col">
-                    <div className="relative aspect-[33/25] w-full min-w-0 shrink-0 overflow-hidden">
-                      <img
-                        src={FIGMA_GLAZE_ASSETS[g.id]}
-                        alt={g.title}
-                        decoding="async"
-                        className={`absolute inset-0 h-full w-full max-w-none object-cover object-center transition-[filter] duration-300 ease-out ${visualFilter}`}
-                      />
-                    </div>
+                  <div className="relative z-[1] flex min-h-0 w-full min-w-0 flex-col">
+                    <div
+                      aria-hidden
+                      className={`relative aspect-[33/25] w-full min-w-0 shrink-0 bg-cover bg-center bg-no-repeat transition-[filter] duration-300 ease-out ${visualFilter}`}
+                      style={{ backgroundImage: `url('${FIGMA_GLAZE_ASSETS[g.id]}')` }}
+                    />
                     <div className="flex shrink-0 flex-col px-3 pt-4.5 pb-5 sm:px-3.5 sm:pt-5 sm:pb-5 md:px-4 md:pt-5.5 md:pb-6">
                       <div className="flex items-center gap-2 md:gap-2.5">
                         {isSel ? (
@@ -156,7 +153,7 @@ export function StepGlaze() {
           </div>
         </div>
 
-        <div className="mt-auto flex shrink-0 -translate-y-[34px] justify-center pt-0.5 md:pt-1">
+        <div className="mt-auto flex shrink-0 justify-center pt-6 sm:pt-8 md:pt-10">
           <motion.button
             type="button"
             onClick={goNext}
