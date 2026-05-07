@@ -72,7 +72,7 @@ export function StepResult() {
   const resultActionText = "text-[15.84px]";
 
   return (
-    <div className="relative flex min-h-0 flex-1 flex-col overflow-hidden bg-[rgb(18,20,20)]">
+    <div className="relative flex min-h-0 flex-1 flex-col overflow-y-auto bg-[rgb(18,20,20)]">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_68%_58%_at_22%_44%,rgba(178,205,186,0.1),transparent_58%)]"
         aria-hidden

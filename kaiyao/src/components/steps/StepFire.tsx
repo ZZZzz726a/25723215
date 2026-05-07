@@ -207,7 +207,7 @@ export function StepFire() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col px-2 py-5 sm:px-3 sm:py-6 md:px-4 md:py-7 xl:px-5 2xl:px-7"
+        className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col px-6 py-5 sm:px-10 sm:py-6 md:px-14 md:py-7 xl:px-20 2xl:px-24"
       >
         <div className="mt-2 max-w-[672px] shrink-0 text-left sm:mt-3">
           <h2 className="font-serif text-4xl font-normal leading-tight tracking-[-0.02em] text-[#e2e2e2] sm:text-5xl md:text-6xl md:leading-[1.1]">
@@ -220,15 +220,15 @@ export function StepFire() {
           </p>
         </div>
 
-        <div className="mt-6 flex min-h-0 flex-1 flex-col items-stretch gap-6 overflow-visible pb-4 sm:mt-7 sm:gap-7 sm:pb-5 lg:mt-8 lg:flex-row-reverse lg:items-start lg:justify-between lg:gap-8 lg:pb-6 xl:gap-10">
+        <div className="mt-6 flex min-h-0 flex-1 flex-col items-stretch gap-6 overflow-visible pb-4 sm:mt-7 sm:gap-7 sm:pb-5 md:mt-8 md:flex-row-reverse md:items-stretch md:gap-8 md:pb-6 xl:gap-10">
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="order-2 flex w-full min-w-0 flex-1 flex-col justify-center lg:order-1 lg:mr-[80px] lg:max-w-[min(100%,502px)] lg:-translate-x-[48px] lg:-translate-y-[10px] lg:self-start"
+            className="order-2 flex w-full min-w-0 flex-1 flex-col justify-between md:order-1 md:max-w-[min(100%,502px)]"
           >
-            <div className="flex flex-row items-end justify-center gap-8 sm:gap-12 lg:translate-y-3 lg:justify-start lg:-translate-x-[172px]">
-              <div className="flex shrink-0 flex-col items-center -translate-x-8 lg:-translate-x-10">
+            <div className="flex flex-row items-end justify-center gap-8 sm:gap-12 md:justify-start">
+              <div className="flex shrink-0 flex-col items-center">
                 <div
                   ref={trackRef}
                   role="slider"
@@ -319,15 +319,53 @@ export function StepFire() {
                 })}
               </div>
             </div>
+
+            <div className="mt-8 flex flex-col items-stretch">
+              <div
+                className="h-px w-full shrink-0 rounded-full bg-[rgba(232,168,124,0.12)]"
+                aria-hidden
+              />
+              <motion.button
+                type="button"
+                onClick={() => {
+                  setFireTempC(displayTemp);
+                  goNext();
+                }}
+                whileHover={
+                  reduceMotion
+                    ? { scale: 1 }
+                    : {
+                        scale: 1.02,
+                        borderColor: ORANGE_BORDER_HOVER,
+                        boxShadow: `${ORANGE_BTN_INSET}, 0 0 16px rgba(232,168,124,0.28)`,
+                      }
+                }
+                whileTap={reduceMotion ? { scale: 1 } : { scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 480, damping: 28 }}
+                className="relative mt-4 flex h-[66px] w-full items-center justify-center overflow-hidden border-2 bg-[rgba(255,255,255,0.002)] transition-[border-color,box-shadow] duration-300"
+                style={{
+                  borderColor: ORANGE_BORDER,
+                  boxShadow: ORANGE_BTN_INSET,
+                }}
+              >
+                <span className="w-full text-center font-sans text-base font-normal tracking-[0.4em] text-[#e2e2e2]">
+                  确认火候
+                </span>
+                <span
+                  className="pointer-events-none absolute bottom-0 left-px right-0 h-px bg-[rgba(232,168,124,0.12)]"
+                  aria-hidden
+                />
+              </motion.button>
+            </div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="relative order-1 flex w-full max-w-[520px] shrink-0 justify-center overflow-visible sm:max-w-[min(100vw-2rem,520px)] lg:order-2 lg:-translate-y-5 lg:justify-start"
+            className="relative order-1 flex w-full max-w-[520px] shrink-0 justify-center overflow-visible sm:max-w-[min(100vw-2rem,520px)] md:order-2 md:justify-start"
           >
-            <div className="relative aspect-square w-full max-w-[520px] origin-top-left translate-x-[193px] translate-y-[16px] scale-[0.98] will-change-transform sm:scale-[1.02] lg:scale-[1.06]">
+            <div className="relative aspect-square w-full max-w-[520px] scale-[0.98] will-change-transform sm:scale-[1.02] md:scale-[1.06]">
               <div
                 className="absolute inset-[1%] bg-cover bg-center bg-no-repeat sm:inset-[1.25%]"
                 style={{ backgroundImage: `url('${FIGMA_FIRE_ASSETS.previewPlate}')` }}
@@ -379,47 +417,6 @@ export function StepFire() {
         className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-[min(35vh,280px)] origin-bottom scale-y-[-1] bg-[linear-gradient(0deg,rgba(18,20,20,0)_0%,rgb(18,20,20)_100%)] opacity-90"
         aria-hidden
       />
-      <div
-        className="pointer-events-auto absolute bottom-[max(1.25rem,env(safe-area-inset-bottom,0px))] right-3 z-30 translate-x-[44px] -translate-y-[116px] sm:bottom-5 sm:right-4 sm:-translate-y-[106px] md:right-10 md:-translate-y-[104px] lg:right-[clamp(3rem,8vw+15rem,28rem)] xl:right-[clamp(3.5rem,7vw+17rem,30rem)]"
-      >
-        <div className="flex w-[min(640px,calc(100vw-1rem))] max-w-[520px] flex-col items-stretch gap-2 sm:w-[min(640px,calc(100vw-1.5rem))]">
-          <div
-            className="h-px w-full shrink-0 -translate-y-[28px] rounded-full bg-[rgba(232,168,124,0.12)]"
-            aria-hidden
-          />
-          <motion.button
-            type="button"
-            onClick={() => {
-              setFireTempC(displayTemp);
-              goNext();
-            }}
-            whileHover={
-              reduceMotion
-                ? { scale: 1 }
-                : {
-                    scale: 1.02,
-                    borderColor: ORANGE_BORDER_HOVER,
-                    boxShadow: `${ORANGE_BTN_INSET}, 0 0 16px rgba(232,168,124,0.28)`,
-                  }
-            }
-            whileTap={reduceMotion ? { scale: 1 } : { scale: 0.98 }}
-            transition={{ type: "spring", stiffness: 480, damping: 28 }}
-            className="relative flex h-[66px] w-full items-center justify-center overflow-hidden border-2 bg-[rgba(255,255,255,0.002)] transition-[border-color,box-shadow] duration-300"
-            style={{
-              borderColor: ORANGE_BORDER,
-              boxShadow: ORANGE_BTN_INSET,
-            }}
-          >
-            <span className="w-full text-center font-sans text-base font-normal tracking-[0.4em] text-[#e2e2e2]">
-              确认火候
-            </span>
-            <span
-              className="pointer-events-none absolute bottom-0 left-px right-0 h-px bg-[rgba(232,168,124,0.12)]"
-              aria-hidden
-            />
-          </motion.button>
-        </div>
-      </div>
     </div>
   );
 }

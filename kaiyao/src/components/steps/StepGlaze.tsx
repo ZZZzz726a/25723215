@@ -75,7 +75,7 @@ export function StepGlaze() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col overflow-hidden px-2 py-5 sm:px-3 sm:py-6 md:px-4 md:py-7 xl:px-5 2xl:px-7"
+        className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col overflow-y-auto px-6 py-5 sm:px-10 sm:py-6 md:px-14 md:py-7 xl:px-20 2xl:px-24"
       >
         <div className="mt-2 max-w-[672px] shrink-0 text-left sm:mt-3">
           <h2 className="font-serif text-4xl font-normal leading-tight tracking-[-0.02em] text-[#e2e2e2] sm:text-5xl md:text-6xl md:leading-[1.1]">
@@ -88,7 +88,7 @@ export function StepGlaze() {
           </p>
         </div>
 
-        <div className="mt-6 flex min-h-0 flex-1 flex-col overflow-hidden pb-4 sm:mt-7 sm:pb-5 lg:mt-8 lg:pb-6">
+        <div className="mt-6 flex min-h-0 flex-1 flex-col overflow-y-auto pb-4 sm:mt-7 sm:pb-5 lg:mt-8 lg:pb-6">
           <div className="mx-auto mt-2.5 grid min-h-0 w-[95%] max-w-full flex-1 grid-cols-1 items-start gap-[calc(2.5rem+6px)] md:grid-cols-3 md:gap-[calc(3.5rem+6px)] lg:gap-[calc(5rem+6px)]">
             {GLAZES.map((g, i) => {
               const isSel = selected === g.id;
