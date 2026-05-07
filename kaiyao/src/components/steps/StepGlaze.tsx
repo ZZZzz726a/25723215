@@ -89,7 +89,7 @@ export function StepGlaze() {
         </div>
 
         <div className="mt-6 flex min-h-0 flex-1 flex-col overflow-y-auto pb-4 sm:mt-7 sm:pb-5 lg:mt-8 lg:pb-6">
-          <div className="mx-auto mt-2.5 grid min-h-0 min-w-0 w-[95%] max-w-full flex-1 grid-cols-1 items-start gap-[calc(2.5rem+6px)] md:grid-cols-3 md:gap-[calc(3.5rem+6px)] lg:gap-[calc(5rem+6px)]">
+          <div className="mx-auto mt-2.5 grid min-h-0 w-[95%] max-w-full flex-1 grid-cols-1 items-start gap-[calc(2.5rem+6px)] md:grid-cols-3 md:gap-[calc(3.5rem+6px)] lg:gap-[calc(5rem+6px)]">
             {GLAZES.map((g, i) => {
               const isSel = selected === g.id;
               /** 选中提亮、未选中压暗；温润底图偏亮，单独压低避免过曝「发光感」 */
@@ -114,7 +114,7 @@ export function StepGlaze() {
                   whileTap={{ scale: 0.995 }}
                   onClick={() => setGlaze(g.id)}
                   aria-pressed={isSel}
-                  className={`group relative flex min-h-0 min-w-0 flex-col overflow-hidden rounded-sm border-2 bg-[#1a1c1c] text-left transition-colors ${
+                  className={`group relative flex min-h-0 flex-col overflow-hidden rounded-sm border-2 bg-[#1a1c1c] text-left transition-colors ${
                     isSel ? selShadow : "border-white/[0.06] hover:border-white/[0.12]"
                   }`}
                 >
@@ -122,13 +122,13 @@ export function StepGlaze() {
                     className={`pointer-events-none absolute inset-0 z-0 transition-colors duration-300 ease-out ${matteClass}`}
                     aria-hidden
                   />
-                  <div className="relative z-[1] flex min-h-0 min-w-0 flex-col">
+                  <div className="relative z-[1] flex min-h-0 flex-col">
                     <div className="relative aspect-[33/25] w-full min-w-0 shrink-0 overflow-hidden">
                       <img
                         src={FIGMA_GLAZE_ASSETS[g.id]}
                         alt={g.title}
                         decoding="async"
-                        className={`absolute inset-0 h-full w-full min-h-full min-w-full object-cover object-center transition-[filter] duration-300 ease-out ${visualFilter}`}
+                        className={`absolute inset-0 h-full w-full object-fill object-center transition-[filter] duration-300 ease-out ${visualFilter}`}
                       />
                     </div>
                     <div className="flex shrink-0 flex-col px-3 pt-4.5 pb-5 sm:px-3.5 sm:pt-5 sm:pb-5 md:px-4 md:pt-5.5 md:pb-6">
