@@ -227,7 +227,7 @@ export function StepFire() {
             transition={{ delay: 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="order-2 flex w-full min-w-0 flex-1 flex-col justify-between md:relative md:order-1 md:z-10 md:max-w-[min(100%,502px)]"
           >
-            <div className="w-full md:-translate-x-20 md:translate-y-2 lg:-translate-x-28 lg:translate-y-2 xl:-translate-x-40 xl:translate-y-2 2xl:-translate-x-56 2xl:translate-y-2.5">
+            <div className="w-full md:-translate-x-16 md:translate-y-2 lg:-translate-x-24 lg:translate-y-2 xl:-translate-x-36 xl:translate-y-2 2xl:-translate-x-52 2xl:translate-y-2.5">
             <div className="flex flex-row items-end justify-center gap-8 sm:gap-12 md:justify-start">
               <div className="flex shrink-0 flex-col items-center">
                 <div
@@ -343,7 +343,7 @@ export function StepFire() {
                 }
                 whileTap={reduceMotion ? { scale: 1 } : { scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 480, damping: 28 }}
-                className="relative mt-6 flex h-[66px] w-full items-center justify-center overflow-hidden border-2 bg-[rgba(255,255,255,0.002)] transition-[border-color,box-shadow] duration-300 sm:mt-7 md:mt-8"
+                className="relative mt-7 flex h-[66px] w-full items-center justify-center overflow-hidden border-2 bg-[rgba(255,255,255,0.002)] transition-[border-color,box-shadow] duration-300 sm:mt-8 md:mt-9"
                 style={{
                   borderColor: ORANGE_BORDER,
                   boxShadow: ORANGE_BTN_INSET,
@@ -367,7 +367,7 @@ export function StepFire() {
             transition={{ delay: 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="relative order-1 flex w-full max-w-[520px] shrink-0 items-center justify-center overflow-visible sm:max-w-[min(100vw-2rem,520px)] md:order-2 md:z-0 md:max-w-none md:min-w-0 md:flex-1 md:justify-start"
           >
-            <div className="w-full max-w-[520px] translate-x-14 -translate-y-5 sm:translate-x-16 sm:-translate-y-6 md:translate-x-18 md:-translate-y-7 lg:translate-x-20 lg:-translate-y-8 xl:translate-x-24 xl:-translate-y-9 2xl:translate-x-32 2xl:-translate-y-11">
+            <div className="w-full max-w-[520px] translate-x-16 -translate-y-5 sm:translate-x-18 sm:-translate-y-6 md:translate-x-20 md:-translate-y-7 lg:translate-x-22 lg:-translate-y-8 xl:translate-x-28 xl:-translate-y-9 2xl:translate-x-36 2xl:-translate-y-11">
               <div className="relative aspect-square w-full max-w-[520px] shrink-0 scale-[0.98] will-change-transform sm:scale-[1.02] md:scale-[1.06]">
               <div
                 className="absolute inset-[1%] bg-cover bg-center bg-no-repeat sm:inset-[1.25%]"

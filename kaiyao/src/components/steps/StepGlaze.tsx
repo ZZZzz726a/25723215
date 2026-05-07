@@ -128,7 +128,7 @@ export function StepGlaze() {
                         src={FIGMA_GLAZE_ASSETS[g.id]}
                         alt={g.title}
                         decoding="async"
-                        className={`absolute inset-0 h-full w-full object-fill object-center transition-[filter] duration-300 ease-out ${visualFilter}`}
+                        className={`absolute inset-0 h-full w-full max-w-none object-cover object-center transition-[filter] duration-300 ease-out ${visualFilter}`}
                       />
                     </div>
                     <div className="flex shrink-0 flex-col px-3 pt-4.5 pb-5 sm:px-3.5 sm:pt-5 sm:pb-5 md:px-4 md:pt-5.5 md:pb-6">
@@ -156,7 +156,7 @@ export function StepGlaze() {
           </div>
         </div>
 
-        <div className="mt-auto flex shrink-0 -translate-y-[26px] justify-center pt-0.5 md:pt-1">
+        <div className="mt-auto flex shrink-0 -translate-y-[34px] justify-center pt-0.5 md:pt-1">
           <motion.button
             type="button"
             onClick={goNext}
