@@ -136,7 +136,7 @@ export function StepMechanism() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-10 mx-auto w-full max-w-[1920px] overflow-visible px-2 pb-14 pt-8 sm:px-3 sm:pt-10 md:px-4 md:pb-16 md:pt-12 xl:px-5 2xl:px-7"
+        className="relative z-10 mx-auto w-full max-w-[1920px] overflow-visible px-5 pb-14 pt-8 sm:px-9 sm:pt-10 md:px-12 md:pb-16 md:pt-12 xl:px-18 2xl:px-20"
       >
         <div className="relative mb-6 min-h-[min(50vh,420px)] md:mb-8 md:min-h-[min(53vh,500px)] lg:mb-9 lg:min-h-[min(56vh,535px)]">
           <PorcelainGlbDecoration />

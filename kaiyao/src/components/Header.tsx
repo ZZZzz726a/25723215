@@ -48,11 +48,11 @@ export function Header({ screen }: { screen: Screen }) {
       className={
         homeRailHeader
           ? "relative z-30 flex h-20 w-full shrink-0 justify-center border-b border-[rgba(244,244,245,0.1)] bg-[rgba(9,9,11,0.8)] backdrop-blur-[30px]"
-          : "relative z-20 flex shrink-0 items-center justify-between px-6 py-5 md:px-10"
+          : "relative z-20 flex shrink-0 items-center justify-between px-5 py-5 sm:px-9 md:px-12 xl:px-18 2xl:px-20"
       }
     >
       {homeRailHeader ? (
-        <div className="mx-auto flex h-full w-full max-w-[1920px] items-center px-2 sm:px-3 md:px-4 xl:px-5 2xl:px-7">
+        <div className="mx-auto flex h-full w-full max-w-[1920px] items-center px-5 sm:px-9 md:px-12 xl:px-18 2xl:px-20">
           <div className="flex min-w-[7rem] shrink-0 items-center sm:min-w-[8.5rem]">
             <motion.button
               type="button"

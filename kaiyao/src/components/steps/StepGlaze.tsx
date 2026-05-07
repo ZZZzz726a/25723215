@@ -75,7 +75,7 @@ export function StepGlaze() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col overflow-y-auto px-6 py-5 sm:px-10 sm:py-6 md:px-14 md:py-7 xl:px-20 2xl:px-24"
+        className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col overflow-y-auto px-5 py-5 sm:px-9 sm:py-6 md:px-12 md:py-7 xl:px-18 2xl:px-20"
       >
         <div className="mt-2 max-w-[672px] shrink-0 text-left sm:mt-3">
           <h2 className="font-serif text-4xl font-normal leading-tight tracking-[-0.02em] text-[#e2e2e2] sm:text-5xl md:text-6xl md:leading-[1.1]">
@@ -89,7 +89,7 @@ export function StepGlaze() {
         </div>
 
         <div className="mt-6 flex min-h-0 flex-1 flex-col overflow-y-auto pb-4 sm:mt-7 sm:pb-5 lg:mt-8 lg:pb-6">
-          <div className="mx-auto mt-2.5 grid min-h-0 w-[95%] max-w-full flex-1 grid-cols-1 items-start gap-[calc(2.5rem+6px)] md:grid-cols-3 md:gap-[calc(3.5rem+6px)] lg:gap-[calc(5rem+6px)]">
+          <div className="mx-auto mt-2.5 grid min-h-0 min-w-0 w-[95%] max-w-full flex-1 grid-cols-1 items-start gap-[calc(2.5rem+6px)] md:grid-cols-3 md:gap-[calc(3.5rem+6px)] lg:gap-[calc(5rem+6px)]">
             {GLAZES.map((g, i) => {
               const isSel = selected === g.id;
               /** 选中提亮、未选中压暗；温润底图偏亮，单独压低避免过曝「发光感」 */
@@ -114,7 +114,7 @@ export function StepGlaze() {
                   whileTap={{ scale: 0.995 }}
                   onClick={() => setGlaze(g.id)}
                   aria-pressed={isSel}
-                  className={`group relative flex min-h-0 flex-col overflow-hidden rounded-sm border-2 bg-[#1a1c1c] text-left transition-colors ${
+                  className={`group relative flex min-h-0 min-w-0 flex-col overflow-hidden rounded-sm border-2 bg-[#1a1c1c] text-left transition-colors ${
                     isSel ? selShadow : "border-white/[0.06] hover:border-white/[0.12]"
                   }`}
                 >
@@ -122,13 +122,13 @@ export function StepGlaze() {
                     className={`pointer-events-none absolute inset-0 z-0 transition-colors duration-300 ease-out ${matteClass}`}
                     aria-hidden
                   />
-                  <div className="relative z-[1] flex min-h-0 flex-col">
-                    <div className="relative aspect-[33/25] w-full shrink-0 overflow-hidden">
+                  <div className="relative z-[1] flex min-h-0 min-w-0 flex-col">
+                    <div className="relative aspect-[33/25] w-full min-w-0 shrink-0 overflow-hidden">
                       <img
                         src={FIGMA_GLAZE_ASSETS[g.id]}
                         alt={g.title}
                         decoding="async"
-                        className={`absolute inset-0 h-full w-full object-cover object-center transition-[filter] duration-300 ease-out ${visualFilter}`}
+                        className={`absolute inset-0 h-full w-full min-h-full min-w-full object-cover object-center transition-[filter] duration-300 ease-out ${visualFilter}`}
                       />
                     </div>
                     <div className="flex shrink-0 flex-col px-3 pt-4.5 pb-5 sm:px-3.5 sm:pt-5 sm:pb-5 md:px-4 md:pt-5.5 md:pb-6">

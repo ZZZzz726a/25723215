@@ -87,7 +87,7 @@ export function StepResult() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-10 mx-auto w-full max-w-[1920px] px-2 pb-14 pt-[46px] sm:px-3 sm:pt-[50px] md:px-4 md:pb-16 md:pt-[54px] xl:px-5 2xl:px-7"
+        className="relative z-10 mx-auto w-full max-w-[1920px] px-5 pb-14 pt-[46px] sm:px-9 sm:pt-[50px] md:px-12 md:pb-16 md:pt-[54px] xl:px-18 2xl:px-20"
       >
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start lg:gap-10 xl:gap-12">
           <motion.div

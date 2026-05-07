@@ -330,7 +330,7 @@ export function StepReveal() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col px-2 pb-14 pt-8 sm:px-3 sm:pt-10 md:px-4 md:pb-16 md:pt-12 xl:px-5 2xl:px-7"
+        className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col px-5 pb-14 pt-8 sm:px-9 sm:pt-10 md:px-12 md:pb-16 md:pt-12 xl:px-18 2xl:px-20"
       >
         <div className="shrink-0 text-center">
           <h2 className="font-serif text-4xl font-normal leading-tight tracking-[0.08em] text-[#e2e2e2] sm:text-5xl md:text-[3.25rem] lg:text-6xl">
@@ -341,7 +341,7 @@ export function StepReveal() {
           </p>
         </div>
 
-        <div className="relative z-10 mt-8 flex min-h-0 flex-1 flex-col items-center justify-center px-6 pb-4 sm:mt-10 sm:px-10">
+        <div className="relative z-10 mt-8 flex min-h-0 flex-1 flex-col items-center justify-center px-0 pb-4 sm:mt-10">
           {/* 白边在遮罩外一圈：外层 padding 露底，canvas 盖不到 */}
           <div className="w-full max-w-[min(92vw,520px)] shrink-0 rounded-md bg-[linear-gradient(160deg,rgba(255,255,255,0.38),rgba(255,255,255,0.14)_45%,rgba(255,255,255,0.22))] p-[2.5px] shadow-[0_0_0_1px_rgba(255,255,255,0.06)] sm:p-[3px]">
             <div

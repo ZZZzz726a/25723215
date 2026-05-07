@@ -207,7 +207,7 @@ export function StepFire() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col px-6 py-5 sm:px-10 sm:py-6 md:px-14 md:py-7 xl:px-20 2xl:px-24"
+        className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col px-5 py-5 sm:px-9 sm:py-6 md:px-12 md:py-7 xl:px-18 2xl:px-20"
       >
         <div className="mt-2 max-w-[672px] shrink-0 text-left sm:mt-3">
           <h2 className="font-serif text-4xl font-normal leading-tight tracking-[-0.02em] text-[#e2e2e2] sm:text-5xl md:text-6xl md:leading-[1.1]">
@@ -225,8 +225,9 @@ export function StepFire() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="order-2 flex w-full min-w-0 flex-1 flex-col justify-between md:order-1 md:max-w-[min(100%,502px)]"
+            className="order-2 flex w-full min-w-0 flex-1 flex-col justify-between md:relative md:order-1 md:z-10 md:max-w-[min(100%,502px)]"
           >
+            <div className="w-full md:-translate-x-20 md:translate-y-2 lg:-translate-x-28 lg:translate-y-2 xl:-translate-x-40 xl:translate-y-2 2xl:-translate-x-56 2xl:translate-y-2.5">
             <div className="flex flex-row items-end justify-center gap-8 sm:gap-12 md:justify-start">
               <div className="flex shrink-0 flex-col items-center">
                 <div
@@ -320,7 +321,7 @@ export function StepFire() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-col items-stretch">
+            <div className="mt-10 flex flex-col items-stretch sm:mt-12 md:mt-14 lg:mt-16 xl:mt-20">
               <div
                 className="h-px w-full shrink-0 rounded-full bg-[rgba(232,168,124,0.12)]"
                 aria-hidden
@@ -342,7 +343,7 @@ export function StepFire() {
                 }
                 whileTap={reduceMotion ? { scale: 1 } : { scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 480, damping: 28 }}
-                className="relative mt-4 flex h-[66px] w-full items-center justify-center overflow-hidden border-2 bg-[rgba(255,255,255,0.002)] transition-[border-color,box-shadow] duration-300"
+                className="relative mt-6 flex h-[66px] w-full items-center justify-center overflow-hidden border-2 bg-[rgba(255,255,255,0.002)] transition-[border-color,box-shadow] duration-300 sm:mt-7 md:mt-8"
                 style={{
                   borderColor: ORANGE_BORDER,
                   boxShadow: ORANGE_BTN_INSET,
@@ -357,15 +358,17 @@ export function StepFire() {
                 />
               </motion.button>
             </div>
+            </div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="relative order-1 flex w-full max-w-[520px] shrink-0 justify-center overflow-visible sm:max-w-[min(100vw-2rem,520px)] md:order-2 md:justify-start"
+            className="relative order-1 flex w-full max-w-[520px] shrink-0 items-center justify-center overflow-visible sm:max-w-[min(100vw-2rem,520px)] md:order-2 md:z-0 md:max-w-none md:min-w-0 md:flex-1 md:justify-start"
           >
-            <div className="relative aspect-square w-full max-w-[520px] scale-[0.98] will-change-transform sm:scale-[1.02] md:scale-[1.06]">
+            <div className="w-full max-w-[520px] translate-x-14 -translate-y-5 sm:translate-x-16 sm:-translate-y-6 md:translate-x-18 md:-translate-y-7 lg:translate-x-20 lg:-translate-y-8 xl:translate-x-24 xl:-translate-y-9 2xl:translate-x-32 2xl:-translate-y-11">
+              <div className="relative aspect-square w-full max-w-[520px] shrink-0 scale-[0.98] will-change-transform sm:scale-[1.02] md:scale-[1.06]">
               <div
                 className="absolute inset-[1%] bg-cover bg-center bg-no-repeat sm:inset-[1.25%]"
                 style={{ backgroundImage: `url('${FIGMA_FIRE_ASSETS.previewPlate}')` }}
@@ -408,6 +411,7 @@ export function StepFire() {
                   </div>
                 </div>
               </div>
+            </div>
             </div>
           </motion.div>
         </div>

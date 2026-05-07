@@ -97,7 +97,7 @@ export function StepMood() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-10 mx-auto w-full max-w-[1920px] px-2 pb-14 pt-8 sm:px-3 sm:pt-10 md:px-4 md:pb-16 md:pt-12 xl:px-5 2xl:px-7"
+        className="relative z-10 mx-auto w-full max-w-[1920px] px-5 pb-14 pt-8 sm:px-9 sm:pt-10 md:px-12 md:pb-16 md:pt-12 xl:px-18 2xl:px-20"
       >
         <div className="text-center">
           <h2 className="font-serif text-4xl font-normal leading-tight tracking-[0.08em] text-[#e2e2e2] sm:text-5xl md:text-[3.25rem] lg:text-6xl">

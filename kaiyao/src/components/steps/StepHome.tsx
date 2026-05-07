@@ -51,7 +51,7 @@ export function StepHome() {
       )}
 
       <div className="relative z-10 flex flex-1 flex-col justify-center py-8 sm:py-10">
-        <div className="mx-auto flex w-full max-w-[1920px] flex-col-reverse items-center gap-12 px-6 sm:px-10 md:px-14 xl:flex-row xl:items-center xl:justify-between xl:gap-6 xl:px-20 2xl:px-24">
+        <div className="mx-auto flex w-full max-w-[1920px] flex-col-reverse items-center gap-12 px-5 sm:px-9 md:px-12 xl:flex-row xl:items-center xl:justify-between xl:gap-6 xl:px-18 2xl:px-20">
           <motion.div
             variants={stagger}
             initial="hidden"
