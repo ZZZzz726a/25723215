@@ -60,7 +60,7 @@ export function StepGlaze() {
   }, [selections.glaze, setGlaze]);
 
   return (
-    <div className="relative flex h-full min-h-0 flex-1 flex-col overflow-hidden bg-[rgb(18,20,20)]">
+    <div className="relative flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-x-hidden overflow-y-visible bg-[rgb(18,20,20)]">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_52%_48%_at_50%_44%,rgba(120,188,168,0.09),transparent_64%)]"
         aria-hidden

@@ -11,10 +11,18 @@ html {
   font-size: clamp(10px, calc(100vw * 16 / 1920), 16px);
 }
 
+/* 至少一屏高；内容超出时由文档纵向滚动，避免 height:100% 锁死视口导致裁切 */
 html,
 body,
 #root {
-  height: 100%;
+  min-height: 100%;
+  min-height: 100dvh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 body {

@@ -84,7 +84,7 @@ export function StepMood() {
   const bg = FIGMA_MOOD_ASSETS.backgroundFull;
 
   return (
-    <div className="relative flex min-h-0 flex-1 flex-col overflow-x-hidden overflow-y-auto bg-[rgb(18,20,20)]">
+    <div className="relative flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-x-hidden overflow-y-auto bg-[rgb(18,20,20)]">
       <img
         src={bg}
         alt=""

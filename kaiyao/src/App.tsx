@@ -15,7 +15,7 @@ function ExperienceShell() {
 
   return (
     <div
-      className={`flex h-full min-h-[100dvh] flex-col ${screen === "home" || screen === "mechanism" || screen === "mood" || screen === "fire" || screen === "glaze" || screen === "kiln" || screen === "reveal" || screen === "result" ? "bg-[rgb(18,20,20)]" : "bg-kiln-bg bg-radial-spot"}`}
+      className={`flex min-h-[100dvh] w-full min-w-0 flex-1 flex-col ${screen === "home" || screen === "mechanism" || screen === "mood" || screen === "fire" || screen === "glaze" || screen === "kiln" || screen === "reveal" || screen === "result" ? "bg-[rgb(18,20,20)]" : "bg-kiln-bg bg-radial-spot"}`}
     >
       <Header screen={screen} />
       <AnimatePresence mode="wait">
@@ -26,7 +26,7 @@ function ExperienceShell() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="flex min-h-0 flex-1 flex-col"
+          className="flex min-h-0 w-full min-w-0 flex-1 flex-col"
         >
           {screen === "home" && <StepHome />}
           {screen === "mechanism" && <StepMechanism />}

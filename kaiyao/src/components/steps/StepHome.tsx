@@ -29,7 +29,7 @@ export function StepHome() {
   const HD = HOME_HALO_DEBUG;
 
   return (
-    <div className="relative flex min-h-0 flex-1 flex-col overflow-hidden bg-[rgb(18,20,20)]">
+    <div className="relative flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-x-hidden overflow-y-visible bg-[rgb(18,20,20)]">
       {/* 全屏底图：左侧文案、右侧展柜区背后都是它；局部偏绿/偏亮常在图里 */}
       <img
         src={background}

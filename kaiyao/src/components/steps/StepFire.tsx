@@ -186,7 +186,7 @@ export function StepFire() {
   const displayZh = LEVELS.find((l) => l.id === glowLevel)!.zh;
 
   return (
-    <div className="relative flex h-full min-h-0 flex-1 flex-col overflow-hidden bg-[rgb(18,20,20)]">
+    <div className="relative flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-hidden bg-[rgb(18,20,20)]">
       <img
         src={FIGMA_FIRE_ASSETS.pageBackground}
         alt=""

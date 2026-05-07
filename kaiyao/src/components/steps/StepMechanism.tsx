@@ -116,7 +116,7 @@ export function StepMechanism() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <div className="relative flex min-h-0 flex-1 flex-col overflow-x-visible overflow-y-auto bg-[rgb(18,20,20)]">
+    <div className="relative flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-x-visible overflow-y-auto bg-[rgb(18,20,20)]">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <img
           src={a.decoRightTall}
