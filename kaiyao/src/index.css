@@ -11,6 +11,17 @@ html {
   font-size: clamp(10px, calc(100vw * 16 / 1920), 16px);
 }
 
+/* 不显示滚动条，仍可用滚轮、触控与键盘滚动（含文档与页内 overflow 区域） */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 /* 至少一屏高；内容超出时由文档纵向滚动，避免 height:100% 锁死视口导致裁切 */
 html,
 body,

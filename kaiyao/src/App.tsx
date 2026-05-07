@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { useLayoutEffect } from "react";
 import { Header } from "./components/Header";
 import { StepFire } from "./components/steps/StepFire";
 import { StepGlaze } from "./components/steps/StepGlaze";
@@ -12,6 +13,12 @@ import { ExperienceProvider, useExperience } from "./context/ExperienceContext";
 
 function ExperienceShell() {
   const { screen } = useExperience();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [screen]);
 
   return (
     <div

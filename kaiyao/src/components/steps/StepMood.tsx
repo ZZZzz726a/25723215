@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
+import { useLayoutEffect, useRef } from "react";
 import type { MoodId } from "../../types";
 import { FIGMA_MOOD_ASSETS } from "../../constants/figmaMoodAssets";
 import { useExperience } from "../../context/ExperienceContext";
@@ -82,9 +83,20 @@ export function StepMood() {
   const selected = selections.mood;
   const reduceMotion = useReducedMotion();
   const bg = FIGMA_MOOD_ASSETS.backgroundFull;
+  const scrollRootRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    const el = scrollRootRef.current;
+    if (!el) return;
+    el.scrollTop = 0;
+    el.scrollLeft = 0;
+  }, []);
 
   return (
-    <div className="relative flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-x-hidden overflow-y-auto bg-[rgb(18,20,20)]">
+    <div
+      ref={scrollRootRef}
+      className="relative flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-x-hidden overflow-y-auto bg-[rgb(18,20,20)]"
+    >
       <img
         src={bg}
         alt=""
